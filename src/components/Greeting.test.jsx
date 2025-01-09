@@ -1,18 +1,18 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import Greeting from "./Greeting";
-import { describe, it, expect } from "vitest";
+/* eslint-disable no-unused-vars */
 import "@testing-library/jest-dom/vitest";
+import { render, screen } from "@testing-library/react";
+import React from "react";
+import { describe, expect, it } from "vitest";
+import Greeting from "./Greeting";
 
 describe("Greeting", () => {
-  it("renders a default greeting", () => {
+  it("should render a default reading", () => {
     render(<Greeting />);
     expect(screen.getByText("Hello, World!")).toBeInTheDocument();
   });
 
-  it("renders greeting with a name", () => {
+  it("should render greeting with a name ", () => {
     render(<Greeting name={"Pedro"} />);
-    const text = screen.getByText("Hello, Pedro!");
-    expect(text).toBeInTheDocument();
+    expect(screen.getByText("Hello, Pedro!")).toBeInTheDocument()
   });
 });

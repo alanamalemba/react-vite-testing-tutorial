@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { useCounter } from "../../hooks/useCounter";
 
 function Counter() {
